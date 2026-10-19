@@ -16,7 +16,29 @@
 15 L X+150 Y+150 Z+100 R0 FMAX M30
 16 END PGM 1214098 MM
 
-------------------------------------------------------
+------------------------------------------------------ Wil je toch ook het middelpunt uithollen? 
+
+0 BEGIN PGM 1214098 MM
+1 BLK FORM 0.1 Z X+0 Y+0 Z-16
+2 BLK FORM 0.2 X+100 Y+100 Z+0
+3 TOOL CALL 8 Z S5600 F1600
+4 L Z+100 R0 FMAX M3
+5 L X-20 Y+25 R0 FMAX
+6 L Z+5 R0 FMAX M8
+7 L Z-5 R0 F1600
+8 L X+25 Y+25 R0 F1600
+9 L X-20 Y-20 R0 F2000
+10 APPR LT X+10 Y+0 LEN20 RL F1600
+11 L Y+14
+12 CC X+25 Y+25
+13 C X+10 Y+36 DR+
+14 L Y+100
+15 DEP LT LEN20 F2000
+16 L Z+5 R0 F2000 M9
+17 L X+150 Y+150 Z+100 R0 FMAX M30
+18 END PGM 1214098 MM
+
+  ------------------------------ UITLEG:
 
 Het programma voor tekening **D1214098** hoeft helemaal niet rond de hele plaat van 100×100 mm te varen en laat bij het juiste gereedschap ook geen middenpuntje staan.
 
